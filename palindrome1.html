@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function palindrome(mainString, sentence) {
+    const mainStringWords = mainString.split(" ");
+    const sentenceWords = sentence.split(" ");
+
+    for (let i = 0; i < mainStringWords.length; i++) {
+      mainStringWords[i] = mainStringWords[i].toLowerCase();
+    }
+    for (let i = 0; i < sentenceWords.length; i++) {
+      sentenceWords[i] = sentenceWords[i].toLowerCase();
+    }
+
+    let count = 0;
+    const matchingWords = [];
+    for (let i = 0; i < sentenceWords.length; i++) {
+      for (let j = 0; j < mainStringWords.length; j++) {
+        if (sentenceWords[i] === mainStringWords[j]) {
+          matchingWords[count] = sentenceWords[i];
+          count++;
+          break;
+        }
+      }
+    }
+    console.log(count);
+    console.log(mainStringWords);
+  }
+
+  palindrome(
+    "The quick brown fox jumps over the lazy dog.",
+    "The lazy dog jumps over the quick brown fox."
+  );
+</script>

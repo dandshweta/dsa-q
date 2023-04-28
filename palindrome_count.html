@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function findAllPalindromicWords(str) {
+    // Convert the string to lowercase for case-insensitive matching
+    str = str.toLowerCase();
+
+    // Split the string into words using whitespace as a delimiter
+    const words = str.split(/\s+/);
+
+    // Initialize an empty array to store palindromic words
+    const palindromes = [];
+
+    // Loop through each word in the array of words
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+
+      // Check if the word is a palindrome
+      if (isPalindrome(word)) {
+        // Add the word to the array of palindromic words
+        palindromes.push(word);
+      }
+    }
+
+    // Return the array of palindromic words
+    return palindromes;
+  }
+
+  function isPalindrome(str) {
+    // Convert the string to lowercase for case-insensitive matching
+    str = str.toLowerCase();
+
+    // Use regular expressions to remove non-alphanumeric characters
+    str = str.replace(/[^a-z0-9]/g, "");
+
+    // Initialize left and right pointers
+    let left = 0;
+    let right = str.length - 1;
+
+    // Loop through the string from both ends
+    while (left < right) {
+      if (str[left] !== str[right]) {
+        // If the characters at the left and right pointers don't match, the string is not a palindrome
+        return false;
+      }
+
+      // Move the left and right pointers inward
+      left++;
+      right--;
+    }
+
+    // If the loop completes without returning false, the string is a palindrome
+    return true;
+  }
+
+  // Example usage
+  const inputStr = "Hello Mam, how are you. Madam, do you know racecar";
+  const palindromicWords = findAllPalindromicWords(inputStr);
+  console.log(palindromicWords);
+</script>

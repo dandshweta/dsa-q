@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function intersectionNoFind(arr1, arr2) {
+    let result = [];
+    for (let i = 0; i < arr1.length; i++) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr1[i] === arr2[j]) {
+          result.push(arr1[i]);
+        }
+      }
+    }
+
+    let result1 = result.slice(); // create a copy of result
+    let numbers = [];
+    function second(no1, no2) {
+      let count = 0; // initialize count
+      for (let k = 0; k < no1.length; k++) {
+        for (let l = 0; l < no2.length; l++) {
+          if (no1[k] === no2[l]) {
+            no2.splice(l, 1); // remove the element at index l from no2
+            numbers[count] = no1[k];
+            count++;
+          }
+        }
+      }
+      return numbers;
+    }
+
+    return second(result1, result);
+  }
+
+  console.log(
+    intersectionNoFind([1, 2, 3, 4, 5, 1], [1, 2, 3, 4, 5, 1, 7, 6, 4, 3, 8])
+  ); // Output: [1, 2, 3, 4, 5, 1]
+</script>

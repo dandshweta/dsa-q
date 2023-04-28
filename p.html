@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function isPalindrome(word) {
+      const length = word.length;
+
+      for (let i = 0; i < length / 2; i++) {
+        if (word[i] !== word[length - 1 - i]) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    function findPalindromeWords(str) {
+      const words = str.split(" ");
+      const palindromeWords = [];
+
+      for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+        if (isPalindrome(word)) {
+          palindromeWords[palindromeWords.length] = word;
+        }
+      }
+
+      return palindromeWords;
+    }
+
+    const palindromeWords = findPalindromeWords(
+      "hello mam how are you Madam do you know racecar"
+    );
+
+    console.log(palindromeWords); // ["mam", "Madam", "racecar"]
+  </script>
+</html>
