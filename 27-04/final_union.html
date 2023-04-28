@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findIntersection(arr1, arr2) {
+        let result = [];
+        let result1 = [];
+        for (let i = 0; i < arr1.length; i++) {
+          for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+              result.push(arr1[i]);
+            }
+          }
+        }
+        for (let m = 0; m < result.length; m++) {
+          for (let n = 0; n < result.length; n++) {
+            if (m !== n && result[m] === result[n]) {
+              result.splice(n, 1);
+            }
+          }
+        }
+        result1 = result;
+        return result1;
+      }
+      console.log(
+        findIntersection([1, 2, 3, 4, 5, 1], [1, 2, 3, 4, 5, 1, 7, 6, 4, 3, 8])
+      );
+    </script>
+  </body>
+</html>

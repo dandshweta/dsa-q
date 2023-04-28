@@ -12,21 +12,33 @@
 <script>
   function findIntersection(arr1, arr2) {
     let result = [];
-    let xyz = [];
+    // let xyz = [];
+    let finalresult = [];
     for (let i = 0; i < arr1.length; i++) {
       for (let j = 0; j < arr2.length; j++) {
         if (arr1[i] === arr2[j]) {
           //   if (!result.includes(arr1[i])) {
           //  result.push(arr1[i]);
           //   result[result.length] = arr1[i];
-          result = result + arr1[i];
+          //result = result + arr1[i];
           // arr2.splice(i, 1);
+          result[result.length] = arr1[i];
         }
       }
     }
     // result.sort();
-    xyz[result];
-    return xyz;
+    // xyz[result];
+    // return xyz;
+    result1[result] = result;
+    for (let m = 0; m < result1.length; m++) {
+      for (let n = 0; n < result1.length; n++) {
+        if (result[m] === result1[n]) {
+          finalresult = result1.pop(result1[m]);
+        }
+      }
+    }
+
+    return finalresult;
   }
   console.log(
     findIntersection([1, 2, 3, 4, 5, 1], [1, 2, 3, 4, 5, 1, 7, 6, 4, 3, 8])
