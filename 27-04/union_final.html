@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const inputA = [1, 2, 3, 4, 5, 1];
+  const inputB = [1, 2, 3, 4, 5, 1, 7, 6, 4, 3, 8];
+
+  const uniqueValues = {};
+
+  for (let i = 0; i < inputA.length; i++) {
+    if (!uniqueValues.hasOwnProperty(inputA[i])) {
+      uniqueValues[inputA[i]] = true;
+      uniqueValues.push(inputA[i]);
+    }
+  }
+
+  for (let i = 0; i < inputB.length; i++) {
+    if (!uniqueValues.hasOwnProperty(inputB[i])) {
+      uniqueValues[inputB[i]] = true;
+      uniqueValues.push(inputB[i]);
+    }
+  }
+  console.log(result);
+</script>

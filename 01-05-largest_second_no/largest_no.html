@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function secondlargestNo(arr) {
+    let k = 2;
+    let a = 0;
+    let b = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (a < arr[i]) {
+        a = arr[i];
+      }
+    }
+    while (a > b && a > 0 && k !== 0) {
+      b - k--;
+    }
+    return a;
+  }
+  console.log(secondlargestNo([1, 9, 4, 5, 6, 7, 8, 4, 3, 2]));
+</script>
