@@ -9,19 +9,30 @@
   <body></body>
 </html>
 <script>
-  function secondlargestNo(arr) {
-    let k = 2;
-    let a = 0;
-    let b = 0;
+  function secondlargestNo(arr, k) {
+    // let k = 4;
+    let max = 0;
+    let count = 0;
     for (let i = 0; i < arr.length; i++) {
-      if (a < arr[i]) {
-        a = arr[i];
+      if (max < arr[i]) {
+        max = arr[i];
       }
     }
-    while (a > b && a > 0 && k !== 0) {
-      k--;
+    let j = 0;
+    let i = 0;
+    while (j < k) {
+      if (max - 1 == arr[i]) {
+        k--;
+        count = arr[i];
+      } else {
+        i++;
+      }
     }
-    return a;
+    return count;
+    // console.log(count);
   }
-  console.log(secondlargestNo([1, 9, 4, 5, 6, 7, 8, 4, 3, 2]));
+
+  console.log(secondlargestNo([1, 9, 4, 5, 6, 7, 8, 4, 3, 2], 4));
+
+  // secondlargestNo([1, 9, 4, 5, 6, 7, 8, 4, 3, 2]);
 </script>
