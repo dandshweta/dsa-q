@@ -10,34 +10,33 @@
 </html>
 <script>
   console.log("Shweta");
-
   let arr = ["e", "f", ["g", "h", ["i", "j"]]];
-  let arr1;
-  let arrx;
-  let arr2;
-  let arr3;
+  let arr1 = "";
+  let arrx = [];
+  let arr2 = "";
+  let arr3 = "";
+  let op = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] >= 97 && arr[i] <= 122) {
+    if (arr[i].length == 1) {
       arrx.push(arr[i]);
     } else {
       arr1 = arr[i];
     }
   }
   for (let i = 0; i < arr1.length; i++) {
-    if (arr[i] >= 97 && arr[i] <= 122) {
-      arrx.push(arr[i]);
+    if (arr1[i].length == 1) {
+      arrx.push(arr1[i]);
     } else {
       arr2 = arr1[i];
     }
   }
-  for (let i = 0; i < arr3.length; i++) {
-    if (arr[i] >= 97 && arr[i] <= 122) {
-      arrx.push(arr[i]);
+  for (let i = 0; i < arr2.length; i++) {
+    if (arr2[i].length == 1) {
+      arrx.push(arr2[i]);
     } else {
-      arr2 = arr3[i];
+      arr3 = arr2[i];
     }
   }
 
-  console.log(arr2);
-  console.log(arr3);
+  console.log(arrx);
 </script>
