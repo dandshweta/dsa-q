@@ -9,14 +9,16 @@
   <body></body>
 </html>
 <script>
-  // let arr1 = [];
-  const arr = [
-    ["a", "b"],
-    ["c", "d"],
-    ["e", "f", ["g", "h", ["i", "j"]]],
-  ];
-  for (let i = 0; i < arr.length; i++) {
-    let newarr = Array.isArray(arr[i]);
-    console.log(newarr);
+  function find(str) {
+    let count = 0;
+    let newstr = str.toLowerCase();
+    for (let i = 0; i < newstr.length; i++) {
+      if ("a" > "8") {
+        count++;
+      }
+    }
+    return count;
   }
+
+  console.log(find("aaaabbaaccc345678cccccccccc#$%^&*(cccccde"));
 </script>

@@ -61,4 +61,4 @@ const findAllPalindromes = (input) => {
   return myMatchedPalindrome;
 };
 
-console.log(findAllPalindromes("my name is ankit mam Hello madam"));
+console.log(findAllPalindromes("my name is ankit mam Hello madam "));

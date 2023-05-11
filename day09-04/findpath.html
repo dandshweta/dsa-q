@@ -38,8 +38,19 @@ step7: if not available else is print undefined
     // const keys = path.split();
     // console.log(keys);
 
-    for (let i = 0; i < keys.length; i++) {}
+    let value = object;
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i];
+      if (value.hasOwnProperty(key)) {
+        value = value[key];
+      } else {
+        return undefined;
+      }
+    }
+
+    return value;
   }
+
   console.log(findPath(obj, "a.b.c")); // 12
   console.log(findPath(obj, "a.b")); // {c: 12, j: false}
   console.log(findPath(obj, "a.b.d")); // undefined
@@ -70,6 +81,7 @@ var obj = {
         b: {
             c: 12,
             j: false
+            n:[1,2,3,4]
         },
         k: null
     }
