@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function add(num1, num2) {
+    const newnum1 = num1.split("");
+    const newnum2 = num2.split("");
+    console.log(newnum1);
+    console.log(newnum2);
+    let sum = "0";
+    for (let i = newnum1.length - 1; i >= 0; i--) {
+      for (let j = newnum2.length - 1; j >= 0; j--) {
+        if ((newnum1.length, newnum2.length)) {
+          sum = newnum1[i] + newnum2[j];
+
+          i++;
+          j++;
+        }
+      }
+      return sum;
+    }
+  }
+  add("11", "123");
+
+  //   Input: num1 = "11", num2 = "123";
+  //   Output: "134";
+
+  // note:  Given two non-negative integers, num1 and num2 represented as string,
+  //    return the sum of num1 and num2 as a string.
+
+  // You must solve the problem without using any built-in library for
+  // handling large integers (such as BigInteger).
+  // You must also not convert the inputs to integers directly.
+</script>
