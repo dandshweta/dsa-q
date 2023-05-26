@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<!-- <script>
+  function findPrime(arr) {
+    function findPrime(arr) {
+      let primes = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i]/arr[i] && (arr[i]/2 ||)) {
+          primes.push(arr[i]);
+        }
+      }
+      return primes;
+    }
+
+    console.log(findPrime([2, 4, 5, 7, 9, 5, 3]));
+  }
+  console.log(findPrime([2, 4, 5, 7, 9, 5, 3]));
+</script> -->
+<script>
+  function isPrime(num) {
+    if (num < 2) {
+      return false;
+    }
+    for (let i = 2; i <= num / 2; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function findPrime(arr) {
+    let primes = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (isPrime(arr[i])) {
+        primes.push(arr[i]);
+      }
+    }
+    return primes;
+  }
+
+  console.log(findPrime([2, 4, 5, 7, 9, 5, 3]));
+</script>

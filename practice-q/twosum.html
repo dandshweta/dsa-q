@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<!-- <script>
+  let output = [];
+  var addTwoNumbers = function (l1, l2) {
+    for (let i = 0; i < l1.length; i++) {
+      for (let j = 0; j < l2.length; j++) {
+        let add = l1[i] + l2[j];
+        if (add > 9) {
+          output = add % 10;
+        } else {
+          output = add;
+        }
+      }
+    }
+  };
+  console.log(addTwoNumbers([2, 4, 3], [5, 6, 4]));
+</script> -->
+<script>
+  var addTwoNumbers = function (l1, l2) {
+    let output = []; // Initialize output as an array
+
+    for (let i = 0; i < l1.length; i++) {
+      let add = l1[i] + l2[i]; // Calculate the sum of corresponding elements
+
+      if (add > 9) {
+        output[i] = add % 10; // Store the remainder in the output array
+      } else {
+        output[i] = add;
+      }
+    }
+
+    return output; // Return the resulting array
+  };
+
+  console.log(addTwoNumbers([2, 4, 3], [5, 6, 4]));
+</script>
