@@ -9,6 +9,13 @@
   <body></body>
 </html>
 <script>
-  function reverseNo(no) {}
-  console.log(reverseNo(-120));
+  const revStr = (input) => {
+    let result = "";
+    for (let i = 0; i < input.length; i++) {
+      result = input[i] + result;
+    }
+
+    return result;
+  };
+  console.log(revStr("shweta"));
 </script>

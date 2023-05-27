@@ -11,7 +11,7 @@
 <script>
   let reverse = function (x) {
     let num = x,
-      revNum = 0;
+      reversenum = 0;
     if (num < 0) {
       num = -num;
       //   console.log(num);
@@ -20,22 +20,22 @@
     while (num > 0) {
       let temp = num % 10;
       console.log(temp);
-      revNum *= 10;
+      reversenum *= 10;
       //   console.log(temp);
-      revNum += temp;
+      reversenum += temp;
       //   console.log(temp);
 
       num -= temp;
       num /= 10;
     }
-    // console.log(num);
-    if (revNum > 2 ** 31 - 1) {
+    console.log(num);
+    if (reversenum > 2 ** 31 - 1) {
       return 0;
     }
     if (x < 0) {
-      return -revNum;
+      return -reversenum;
     }
-    return revNum;
+    return reversenum;
   };
   console.log(reverse(-120));
 </script>
