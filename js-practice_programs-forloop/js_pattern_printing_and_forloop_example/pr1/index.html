@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Image Serve</title>
+    <style>
+      .img-container {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="img-container"
+      src="./ironman-desktop.jpg"
+      alt=""
+      srcset="
+        ./ironman-desktop.jpg 1480w,
+        ./ironman-tablet.jpg   980w,
+        ./ironman-mobile.jpg   480w
+      "
+    />
+    <h1>Hello I'm Iron Man</h1>
+  </body>
+</html>

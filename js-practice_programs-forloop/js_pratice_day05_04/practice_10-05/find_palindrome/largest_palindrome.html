@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function isPalindrome(word) {
+    const length = word.length;
+
+    for (let i = 0; i < length / 2; i++) {
+      if (word[i] !== word[length - 1 - i]) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  function findLargestPalindrome(str) {
+    const words = str.toLowerCase().split(" ");
+    let largestPalindrome = "";
+
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+      if (isPalindrome(word) && word.length > largestPalindrome.length) {
+        largestPalindrome = word;
+      }
+    }
+
+    return largestPalindrome;
+  }
+
+  const str = "hello mam how are you madam do you know racecar";
+  const largestPalindrome = findLargestPalindrome(str);
+
+  console.log(largestPalindrome); // "racecar"
+</script>
+<!-- question -->
+<!-- Question of the day - Find the following
+
+- Largest Palindrome in a given string
+- All Palindrome in a string
+
+Ex - "Hello Mam, how are you. Madam, do you know racecar?
+1- "racecar"
+2- ["mam", "madam", "racecar"] -->

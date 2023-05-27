@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>first no.:<input type="text" id="Fno" /></p>
+    <p>second no.:<input type="text" id="Sno" /></p>
+    <!-- <p>third no.:<input type="text" id="Tno" /></p> -->
+    <button onclick="maxno()">Result</button>
+    <p id="result"></p>
+  </body>
+</html>
+<script>
+  function maxno() {
+    let no1 = document.getElementById("Fno").value;
+    let no2 = document.getElementById("Sno").value;
+    // let no3=document.getElementById("Tno").value;
+    let str1 = parseInt(no1);
+    let str2 = parseInt(no2);
+    let p = Number.isInteger(str1);
+    let q = Number.isInteger(str2);
+    let max_value;
+    if (p === true && q === true) {
+      if (str1 > str2) {
+        max_value = str1;
+      } else if (str2 > str1) {
+        max_value = str2;
+      }
+      document.getElementById("result").innerHTML =
+        "largest integer" + max_value;
+    } else if (p === false && q === false) {
+      document.getElementById("result").innerHTML = "number is not integer";
+    }
+  }
+</script>

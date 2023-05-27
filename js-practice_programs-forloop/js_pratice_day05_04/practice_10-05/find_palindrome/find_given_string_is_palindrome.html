@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const findPalindrome = (str) => {
+    const newstr = str.toLowerCase();
+    // console.log(newstr);
+    const strarr = newstr.split("");
+    // console.log(strarr);
+    let count = 0;
+    for (let i = 0; i < strarr.length; i++) {
+      for (let j = strarr.length - 1; j >= 0; j--) {
+        if (strarr[i] === strarr[j]) {
+          count++;
+          i++;
+        }
+      }
+    }
+    if (count === strarr.length) {
+      console.log("string is palindrome");
+    } else {
+      console.log("string is not palindrome");
+    }
+  };
+  findPalindrome("Madam");
+  findPalindrome("Madak");
+</script>
+
+<!-- <script>
+  const findpalindrome2 = (string) => {
+    string = str.toLowerCase();
+    // console.log(newstr);
+    string = newstr.split("");
+    for (let i = 0; i < (string.length - 1) / 2; i++) {
+      const firstchar = string[i];
+      // const lastchar = string.length - 1;
+      const lastchar = string[string.length - 1 - i];
+      if (firstchar !== lastchar) {
+        console.log("it is not palindrome");
+      } else {
+        console.log("it is palindrome");
+      }
+    }
+  };
+  findpalindrome2("Madam");
+  findpalindrome2("Madak");
+</script> -->
+<script>
+  const findPalindrome2 = (string) => {
+    string = string.toLowerCase();
+    const characters = string.split("");
+    for (let i = 0; i < (characters.length - 1) / 2; i++) {
+      const firstChar = characters[i];
+      const lastChar = characters[characters.length - 1 - i];
+      if (firstChar !== lastChar) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  console.log(findPalindrome2("Madam")); // true
+  console.log(findPalindrome2("Madak")); // false
+</script>
+<script>
+  // function palindrome(str) {
+  //   // goooroog
+
+  //   str = str.toLowerCase();
+  //   for (let i = 0; i < str.length / 2; i++) {
+  //     const firstElem = str[i];
+  //     const lastElem = str[str.length - 1 - i];
+
+  //     // console.log({ firstElem, lastElem });
+
+  //     if (firstElem !== lastElem) {
+  //       return false;
+  //     }
+  //   }
+
+  //   return true;
+  // }
+
+  // console.log(palindrome("madam"));
+  // palindrome("shweta");
+</script>
+
+<!-- question -->
+<!-- find given string is palindrome or not -->
