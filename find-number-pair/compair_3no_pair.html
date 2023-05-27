@@ -1,0 +1,34 @@
+<!-- step1: First take 3 loop for iteration for compair pair for 3 no. 
+step1.2: iterate loops
+step1.3: 2nd loop start from arrays 2 value and third start from third value
+step2: Add three no. from array means num[i]+num[j]+num[k]
+step3: Its addition store in variable.
+step4: If addition is===6 return pair.
+step5: Othewise return null -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function pairfind(num) {
+    for (let i = 0; i < num.length; i++) {
+      for (let j = i + 1; j < num.length; j++) {
+        for (let k = j + 1; k < num.length; k++) {
+          const sum = num[i] + num[j] + num[k];
+          if (sum === 6) {
+            return [num[i], num[j], num[k]];
+          }
+        }
+      }
+    }
+    return null;
+  }
+  console.log(pairfind([1, 2, 3, 4, 5, 6]));
+</script>

@@ -1,0 +1,36 @@
+<!-- step1: First take 2 loop for iteration for compair pair for 2 no. 
+step1.2: iterate loops
+step1.3: 2nd loop start from arrays 2 value
+step2: Add two no. from array means num[i]+num[j]
+step3: Its addition store in variable.
+step4: If addition is===5 return pair.
+step5:For stoaring all pairs we take variables for count and stoaring this count.
+step5: Othewise return null -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function pairfind(num) {
+    const addPair = [];
+    let count = 0;
+    for (let i = 0; i < num.length; i++) {
+      for (let j = i + 1; j < num.length; j++) {
+        const sum = num[i] + num[j];
+        if (sum === 5) {
+          addPair[count] = [num[i], num[j]];
+          count++;
+        }
+      }
+    }
+    return addPair;
+  }
+  console.log(pairfind([1, 2, 3, 4, 5, 6]));
+</script>
