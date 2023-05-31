@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function findDuplicateCharacters(str) {
+    let charMap = {};
+    let duplicates = [];
+    // console.log(str.length);
+    for (let i = 0; i < str.length; i++) {
+      let charCode = str[i].toLowerCase().charCodeAt(0);
+      // console.log(charCode);
+
+      // Check if the character is alphabetic (between a-z)
+      if (
+        (charCode >= 97 && charCode <= 122) ||
+        (charCode >= 65 && charCode <= 90)
+      ) {
+        let char = str[i].toLowerCase();
+        console.log(char);
+
+        if (charMap[char]) {
+          duplicates.push(char);
+        } else {
+          charMap[char] = true;
+        }
+      }
+    }
+
+    return duplicates;
+  }
+
+  // Example usage:
+  const string = "Aabbbbcd";
+  const duplicates = findDuplicateCharacters(string);
+  console.log("Duplicate characters:", duplicates);
+</script>
+<script></script>

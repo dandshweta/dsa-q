@@ -1,0 +1,31 @@
+<!-- @description {Reverse string logic}
+  Step 1 - Define a function
+  Step 2 - Get the input & break into array via split
+  Step 3 - Iterate the array & store data in reverse order
+  Step 4 - Return output
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function reverseStr(input) {
+    const splittedStr = input.split("");
+    // console.log(splittedStr);
+    let result = "";
+
+    for (let i = splittedStr.length - 1; i >= 0; i--) {
+      result = result + splittedStr[i];
+    }
+
+    return result;
+  }
+  console.log(reverseStr("aasssbbbdd"));
+</script>

@@ -1,0 +1,30 @@
+algorithm: step1:first it in lowercase.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function myFunction(str) {
+    var result = "";
+    var freq = {};
+    str = str.toLowerCase();
+    for (i = 0; i < str.length; i++) {
+      let char = str[i];
+      if (freq[char]) {
+        freq[char]++;
+      } else {
+        freq[char] = 1;
+        result = result + char;
+      }
+    }
+    return result;
+  }
+  console.log(myFunction("Aabbccccdddd"));
+</script>
